@@ -1,0 +1,468 @@
+* {
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+
+/* 為什麼padding 20px 150px  product1 intro就會被斷行 */
+
+.grid-container {
+  display: grid;
+  grid-template-rows: repeat(20, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+  padding: 20px 100px;
+}
+
+.top {
+  display: grid;
+  grid-column: 3/span 4;
+  justify-items: center;
+}
+
+.logo {
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  padding: 0 10px;
+  margin-bottom: 5px;
+}
+
+.title {
+  font-size: 72px;
+  line-height: 72px;
+}
+
+.categories {
+  font-size: 48px;
+}
+
+.number {
+  font-size: 48px;
+}
+
+.text {
+  font-style: italic;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.pic {
+  background-size: cover;
+}
+
+.decoration-border {
+  border: 20px solid #50E3C2;
+}
+
+.decoration-box {
+  background-color: #50E3C2;
+}
+
+.decoration-pattern {
+  background-image: url(img/pattern unit.png);
+}
+
+/* product1 */
+
+.product1 {
+  display: grid;
+  grid-area: 2 / 1 / span 6 / span 5;
+  /* background-color: green; */
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.product1 .number {
+  display: grid;
+  grid-area: 6 / 1 / span 1 / span 1;
+  line-height: 48px;
+}
+
+.product1 .categories {
+  display: grid;
+  grid-area: 1 / 1 / span 2 / span 3;
+  align-self: center;
+  order: 2;
+}
+
+.product1 .product-intro {
+  display: grid;
+  grid-area: 5 / 5 / span 2 / span 1;
+}
+
+/* 這邊怎麼寫比較好 */
+
+.product1 .product-intro .text {
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+  height: 24px;
+  margin-left: 24px;
+}
+
+/* 這邊怎麼寫比較好 */
+
+.product1 .decoration-pattern-wrap {
+  display: grid;
+  grid-area: 5 / 1 / span 2 / span 3;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-column: repeat(6, 1fr);
+  order: 2;
+}
+
+.product1 .decoration-pattern {
+  display: grid;
+  grid-area: 2 / 2 / span 2 / span 4;
+  background-image: url(img/patternunit.png);
+  background-repeat: repeat;
+}
+
+.product1 .pic {
+  display: grid;
+  grid-area: 2 / 1 / span 4 / span 4;
+  background-color: grey;
+  background-image: url(img/linenblazer.jpg);
+  background-position: 50% 50%;
+  order: 1;
+}
+
+/* 這邊怎麼寫比較好 */
+
+.product1 .decoration-border {
+  display: grid;
+  grid-area: 1 / 3 / span 3 / span 3;
+  margin: 50px;
+}
+
+/* product2 */
+
+.product2 {
+  display: grid;
+  grid-area: 3 / -4 / span 4 /span 3;
+  background-color: yellow;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.product2 .number {
+  display: grid;
+  grid-area: 1 / -1 / span 1 / span 1;
+}
+
+.product2 .categories {
+  display: grid;
+  grid-area: 4 / -1 / span 1 / span 2;
+  align-self: center;
+}
+
+.product2 .text {
+  display: grid;
+  grid-area: 1 / 1 / span 1 / span 2;
+}
+
+/* 這邊怎麼寫比較好 */
+
+.product2 .product-intro .text {
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+  height: 24px;
+  margin-left: 24px;
+}
+
+.product2 .pic {
+  display: grid;
+  grid-area: 2 / 1 / span 2 / span 2;
+  background-color: red;
+  /* background-image: url(img/FREELIFT.jpg); */
+}
+
+/* 這邊怎麼寫比較好 */
+
+.product2 .decoration-border {
+  display: grid;
+  grid-area: 1 / 2 / span 2 / span 3;
+}
+
+.product2 .decoration-box {
+  display: grid;
+  grid-area: 1 / 1 / span 3 / span 4;
+  margin: 50px;
+}
+
+/* product3 */
+
+.product3 {
+  display: grid;
+  grid-area: 8 / 1 / span 4 /span 5;
+  /* background-color: grey; */
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.product3 .number {
+  display: grid;
+  grid-area: 4 / 5 / span 1 /span 1;
+  order: 1;
+  line-height: 48px;
+}
+
+.product3 .categories {
+  display: grid;
+  grid-area: 1 / 2 / span 1 /span 3;
+  order: 1;
+  line-height: 48px;
+  align-self: end;
+  justify-self: end;
+}
+
+.product3 .pic {
+  display: grid;
+  grid-area: 2 / 1 / span 2 /span 4;
+  background-image: url(img/SUPERSKINNY.jpg);
+  order: 1;
+  background-position: 40% 40%;
+}
+
+.product3 .product-intro {
+  display: grid;
+  grid-area: 4 / 1 / span 1 /span 2;
+  justify-self: end;
+}
+
+.product3 .decoration-border {
+  display: grid;
+  grid-area: 2 / 3 / span 3 /span 3;
+  margin: 50px 100px;
+}
+
+.product3 .decoration-box {
+  display: grid;
+  grid-area: 1 / 1 / span 1 /span 2;
+  margin-top: 50px;
+}
+
+/* product4 */
+
+.product4 {
+  display: grid;
+  grid-area: 7 / -4 / span 7 /span 3;
+  /* background-color: green; */
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.product4 .number {
+  display: grid;
+  grid-area: 6 / 1 / span 1 /span 1;
+  align-self: end;
+  justify-self: end;
+}
+
+/* how to write better */
+
+.product4 .categories {
+  display: grid;
+  grid-area: 3 / 1 / span 2 /span 1;
+  transform-origin: top right;
+  transform: rotate(-90deg);
+  line-height: 48px;
+  position: relative;
+  right: 48px;
+}
+
+.product4 .pic {
+  display: grid;
+  grid-area: 3 / -3 / span 4 /span 2;
+  background-image: url(img/SWEATSHIRTS.jpg);
+  background-position: 50% 50%;
+  order: 0;
+}
+
+.product4 .product-intro {
+  display: grid;
+  grid-area: 1 / -2 / span 2 /span 1;
+  align-self: end;
+}
+
+/* how to write better */
+
+.product4 .product-intro .text {
+  transform-origin: bottom right;
+  transform: rotate(90deg);
+  position: relative;
+  right: 90px;
+}
+
+.product4 .decoration-border {
+  display: grid;
+  grid-area: 2 / 1 / span 2 /span 3;
+  order: -1;
+  margin: 0 80px;
+}
+
+.product4 .decoration-pattern {
+  display: grid;
+  grid-area: 6 / -3 / span 2 / span 2;
+  background-image: url(img/patternunit.png);
+  background-repeat: repeat;
+  margin: 50px 0;
+}
+
+/* product5 */
+
+.product5 {
+  display: grid;
+  grid-area: 12 / 1 / span 4 /span 5;
+  /* background-color: pink; */
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.product5 .number {
+  display: grid;
+  grid-area: 3 / 2 / span 1 /span 1;
+  align-self: end;
+  order: 1;
+}
+
+.product5 .categories {
+  display: grid;
+  grid-area: 2 / 1 / span 1 /span 3;
+  align-self: end;
+  order: 3;
+}
+
+.product5 .pic {
+  display: grid;
+  grid-area: 2 / 3 / span 2 /span 2;
+  background-image: url(img/DENIM.jpg);
+  background-position: 50% 50%;
+  order: 1;
+}
+
+.product5 .product-intro {
+  display: grid;
+  grid-area: 2 / -2 / span 1 /span 1;
+}
+
+.product5 .decoration-border {
+  display: grid;
+  grid-area: 3 / 2 / span 2 /span 2;
+  margin: 50px 0;
+}
+
+.product5 .decoration-pattern {
+  display: grid;
+  grid-area: 1 / 1 / span 2 / span 3;
+  background-image: url(img/patternunit.png);
+  background-repeat: repeat;
+  margin: 50px;
+  order: 2;
+}
+
+/* product6 */
+
+.product6 {
+  display: grid;
+  grid-area: 14 / -6 / span 6 /span 5;
+  /* background-color: blue; */
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.product6 .number {
+  display: grid;
+  grid-area: 3 / 1 / span 1 /span 1;
+  line-height: 48px;
+  align-self: end;
+  justify-self: end;
+}
+
+.product6 .categories {
+  display: grid;
+  grid-area: 1 / 3 / span 1 /span 3;
+  line-height: 48px;
+  align-self: end;
+  justify-self: end;
+}
+
+.product6 .pic {
+  display: grid;
+  grid-area: 2 / 2 / span 4 /span 4;
+  background-image: url(img/VINTAGEDENIM.jpg);
+  order: 1;
+  background-position: 40% 40%;
+}
+
+.product6 .product-intro {
+  display: grid;
+  grid-area: 6 / 3 / span 1 /span 2;
+  justify-self: content;
+}
+
+.product6 .decoration-border {
+  display: grid;
+  grid-area: 5 / 2 / span 2 /span 4;
+  margin-bottom: 50px;
+}
+
+.product6 .decoration-box {
+  display: grid;
+  grid-area: 4 / 1 / span 2 /span 1;
+  margin-left: 80px;
+}
+
+/* product7 */
+
+.product7 {
+  display: grid;
+  grid-area: 16 / 1 / span 5 /span 3;
+  /* background-color: yellow; */
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.product7 .number {
+  display: grid;
+  grid-area: 5 / -2 / span 1 /span 1;
+  line-height: 48px;
+  align-self: end;
+  justify-self: end;
+  order: 1;
+}
+
+.product7 .wrap {
+  display: grid;
+  grid-area: 2 / 3 / span 1 /span 1;
+  order: 1;
+}
+
+/* SOSOSOSOSOS */
+
+.product7 .wrap .categories {
+  transform-origin: bottom left;
+  transform: rotate(90deg);
+}
+
+.product7 .pic {
+  display: grid;
+  grid-area: 2 / 1 / span 4 /span 2;
+  background-image: url(img/EDITION.jpg);
+  background-position: 40% 40%;
+  order: 1;
+}
+
+.product7 .product-intro {
+  display: grid;
+  grid-area: 1 / 1 / span 1 /span 2;
+  align-self: end;
+}
+
+.product7 .decoration-border {
+  display: grid;
+  grid-area: 1 / 1 / span 4 /span 3;
+  margin: 50px;
+}
+
+.product7 .decoration-box {
+  display: grid;
+  grid-area: 4 / -2 / span 2 /span 1;
+}
